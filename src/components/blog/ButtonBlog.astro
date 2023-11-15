@@ -1,5 +1,13 @@
+---
+interface Props {
+  href: string | undefined
+}
+
+const { href }: Props = Astro.props
+---
+
 <a
-  href="/"
+  href={href}
   class="flex items-center text-[#FF00A8] hover:opacity-75 transition-all duration-200 ease-in-out"
   >Read more <span
     ><svg

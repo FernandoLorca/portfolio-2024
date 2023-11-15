@@ -4,9 +4,11 @@ import ButtonBlog from './ButtonBlog.astro'
 interface Props {
   title: string
   description: string
+  href: string | undefined
+  imgSrc: string
 }
 
-const { title, description } = Astro.props
+const { title, description, href, imgSrc }: Props = Astro.props
 ---
 
 <div class="relative col-span-1 items-center bg-[#190526] h-full rounded-lg">
@@ -14,20 +16,20 @@ const { title, description } = Astro.props
   <div class="max-h-[10rem] h-full">
     <img
       class="rounded-t-lg h-full w-full object-cover object-center"
-      src="https://picsum.photos/500/500"
+      src={imgSrc}
       alt=""
     />
   </div>
   <div class="relative z-20 p-4">
     <a
-      class="font-bold mb-4 text-xl underline hover:text-[#FF00A8] transition-all duration-200 ease-in-out"
-      href="/"
+      class="font-bold mb-4 text-xl underline hover:opacity-75 transition-all duration-200 ease-in-out"
+      href={href}
     >
       {title}
     </a>
     <p class="text-sm pt-2 pb-5">
       {description}
     </p>
-    <ButtonBlog />
+    <ButtonBlog href={href} />
   </div>
 </div>

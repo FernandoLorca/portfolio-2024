@@ -3,6 +3,8 @@ import Layout from '../../layouts/Layout.astro'
 import Navbar from '../../components/Navbar.astro'
 import PageTitle from '../../components/PageTitle.astro'
 import CardBlog from '../../components/blog/CardBlog.astro'
+
+const posts = await Astro.glob('./posts/*.mdx')
 ---
 
 <Layout>
@@ -12,22 +14,16 @@ import CardBlog from '../../components/blog/CardBlog.astro'
     <div
       class="grid grid-cols-1 md:grid-cols-2 place-items-center gap-5 px-5 lg:max-w-[50rem]"
     >
-      <CardBlog
-        title="Título del artítculo de mi blog creados con Astro Js"
-        description="Descripción de mi artículo de blog que voy a crear con markdown y astrojs, para poder tener artículos en mi blog de forma dinámica."
-      />
-      <CardBlog
-        title="Título del artítculo de mi blog creados con Astro Js"
-        description="Descripción de mi artículo de blog que voy a crear con markdown y astrojs, para poder tener artículos en mi blog de forma dinámica."
-      />
-      <CardBlog
-        title="Título del artítculo de mi blog creados con Astro Js"
-        description="Descripción de mi artículo de blog que voy a crear con markdown y astrojs, para poder tener artículos en mi blog de forma dinámica."
-      />
-      <CardBlog
-        title="Título del artítculo de mi blog creados con Astro Js"
-        description="Descripción de mi artículo de blog que voy a crear con markdown y astrojs, para poder tener artículos en mi blog de forma dinámica."
-      />
+      {
+        posts.map(post => (
+          <CardBlog
+            title={post.frontmatter.title}
+            description={post.frontmatter.description}
+            href={post.url}
+            imgSrc={post.frontmatter.articleImage}
+          />
+        ))
+      }
     </div>
   </main>
 </Layout>
