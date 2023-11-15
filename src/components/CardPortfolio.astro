@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string
+  tech: string
+  isLarge?: boolean
+  bgColor?: string
+}
+
+const {
+  title,
+  tech,
+  isLarge = false,
+  bgColor = 'bg-[#2C0947]',
+}: Props = Astro.props
+---
+
+<a
+  class={`relative col-span-1 rounded-lg ${bgColor} ${
+    isLarge && 'row-span-2'
+  } hover:opacity-75 transition-all duration-200 ease-in-out`}
+  href="/"
+>
+  <div class="absolute w-full h-full border-2 opacity-10 z-10 rounded-lg"></div>
+  <div class="relative p-3">
+    <h2 class="font-bold pb-1">{title}</h2>
+    <p>{tech}</p>
+  </div>
+</a>

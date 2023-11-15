@@ -1,0 +1,24 @@
+---
+interface Props {
+  isIndex?: boolean
+}
+
+const { isIndex = false } = Astro.props
+---
+
+<div class="relative flex justify-center items-center py-10">
+  <a
+    class={`absolute flex items-center gap-2 mr-40 p-5 z-10 ${
+      isIndex && 'hidden'
+    }`}
+    href="/"
+  >
+    <div class="w-2 h-2 border-b-2 border-l-2 rotate-45"></div>
+  </a>
+
+  <img
+    src="/florca-logo.svg"
+    class="relative w-28"
+    alt="Logo Fernando Lorca"
+  />
+</div>

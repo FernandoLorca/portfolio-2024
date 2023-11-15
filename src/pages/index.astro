@@ -1,23 +1,25 @@
 ---
 import Card from '../components/Card.astro'
 import Layout from '../layouts/Layout.astro'
+import Navbar from '../components/Navbar.astro'
 ---
 
-<Layout title="Fernando Lorca">
-  <div class="flex justify-center py-5">
-    <img
-      src="/florca-logo.svg"
-      class="w-28"
-      alt="Logo Fernando Lorca"
-    />
-  </div>
+<Layout>
+  <Navbar isIndex={true} />
   <main class="flex justify-center">
     <div class="grid grid-cols-2 gap-5 px-5 w-[100%] md:w-[40rem] lg:w-[50rem]">
-      <Card text="Portfolio" />
-      <Card text="About me" />
+      <Card
+        text="Portfolio"
+        path="/portfolio"
+      />
+      <Card
+        text="About me"
+        path="/aboutMe"
+      />
       <Card
         text="Blog"
         isLarge={true}
+        path="/blog"
       />
     </div>
   </main>

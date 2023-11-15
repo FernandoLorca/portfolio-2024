@@ -1,0 +1,51 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Navbar from '../../components/Navbar.astro'
+import PageTitle from '../../components/PageTitle.astro'
+import CardPortfolio from '../../components/CardPortfolio.astro'
+---
+
+<Layout title="Portfolio">
+  <Navbar />
+  <main class="flex items-center flex-col">
+    <PageTitle title="Portfolio" />
+    <div class="grid grid-cols-2 gap-5 px-5 lg:max-w-[50rem]">
+      <CardPortfolio
+        title="🌌 Space Traveling agency"
+        tech="ReactJs"
+      />
+      <CardPortfolio
+        title="🍅 Pomodoro App"
+        tech="ReactJs"
+        isLarge={true}
+        bgColor="bg-[#D13667]"
+      />
+      <CardPortfolio
+        title="⭐ Rating component"
+        tech="Vanilla Javascript"
+        bgColor="bg-[#3A58AC]"
+      />
+      <CardPortfolio
+        title="🧮 Age calculator"
+        tech="ReactJs"
+        isLarge={true}
+        bgColor="bg-[#341D6E]"
+      />
+      <CardPortfolio
+        title="🎴 NFT preview component"
+        tech="Html and css"
+      />
+      <CardPortfolio
+        title="🌐 Old Fernando Lorca Portfolio"
+        tech="ReactJs"
+        isLarge={true}
+        bgColor="bg-[#3A58AC]"
+      />
+      <CardPortfolio
+        title="🔎 Google Clone"
+        tech="Vanilla Javascript"
+        bgColor="bg-[#D13667]"
+      />
+    </div>
+  </main>
+</Layout>

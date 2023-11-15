@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Navbar from '../../components/Navbar.astro'
+import PageTitle from '../../components/PageTitle.astro'
+import CardBlog from '../../components/blog/CardBlog.astro'
+---
+
+<Layout>
+  <Navbar />
+  <PageTitle title="Blog" />
+  <main class="flex flex-col items-center">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 place-items-center gap-5 px-5 lg:max-w-[50rem]"
+    >
+      <CardBlog
+        title="Título del artítculo de mi blog creados con Astro Js"
+        description="Descripción de mi artículo de blog que voy a crear con markdown y astrojs, para poder tener artículos en mi blog de forma dinámica."
+      />
+      <CardBlog
+        title="Título del artítculo de mi blog creados con Astro Js"
+        description="Descripción de mi artículo de blog que voy a crear con markdown y astrojs, para poder tener artículos en mi blog de forma dinámica."
+      />
+      <CardBlog
+        title="Título del artítculo de mi blog creados con Astro Js"
+        description="Descripción de mi artículo de blog que voy a crear con markdown y astrojs, para poder tener artículos en mi blog de forma dinámica."
+      />
+      <CardBlog
+        title="Título del artítculo de mi blog creados con Astro Js"
+        description="Descripción de mi artículo de blog que voy a crear con markdown y astrojs, para poder tener artículos en mi blog de forma dinámica."
+      />
+    </div>
+  </main>
+</Layout>

@@ -1,0 +1,47 @@
+---
+layout: ../../../layouts/PortfolioLayout.astro
+title: Pomodoro App with Reactjs
+githubImage: /github.svg
+githubImageAlt: Github logo
+globeImage: /globe.svg
+globeImageAlt: Globe logo
+spaceAgencyDesktop: /portfolio/pomodoro-desktop.webp
+spaceAgencyDesktopAlt: Pomodoro app image tablet and desktop
+spaceAgencymobile: /portfolio/pomodoro-mobile.webp
+spaceAgencymobileAlt: Pomodoro app image mobile
+repository: https://github.com/FernandoLorca/pomodoro-app-frontend
+website: https://boisterous-pie-97ebbc.netlify.app/
+---
+
+import MarkdownImages from '../../../components/MarkdownImages.tsx'
+import ButtonCta from '../../../components/ButtonCta.tsx'
+
+<div class="flex justify-center gap-10">
+  <MarkdownImages
+    src={frontmatter.spaceAgencyDesktop}
+    alt={frontmatter.spaceAgencyDesktopAlt}
+  />
+  <MarkdownImages
+    src={frontmatter.spaceAgencymobile}
+    alt={frontmatter.spaceAgencymobileAlt}
+  />
+</div>
+
+<div class="flex gap-5 justify-center">
+  <ButtonCta
+    text="Repositorio"
+    href={frontmatter.repository}
+    iconImg={frontmatter.githubImage}
+    iconImgAlt={frontmatter.githubImageAlt}
+  />
+  <ButtonCta
+    text="Sitio"
+    href={frontmatter.website}
+    iconImg={frontmatter.globeImage}
+    iconImgAlt={frontmatter.globeImageAlt}
+  />
+</div>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sagittis consequat mi, quis laoreet velit. Aenean sed mi vehicula, molestie nunc vel, consectetur massa. Fusce eu finibus sapien. Praesent porta turpis vel erat venenatis consectetur vitae ut enim. Vivamus vulputate iaculis vehicula. Nullam viverra magna vel lacus porta pellentesque. Nunc sagittis tortor augue, venenatis scelerisque libero hendrerit vel. Donec ut fermentum dolor.
+
+Donec scelerisque turpis vel molestie pretium. Proin condimentum magna aliquet orci suscipit dignissim. Sed lobortis placerat pulvinar. Maecenas ligula quam, condimentum eget scelerisque et, ullamcorper id enim. Nullam vel dictum ante, a lacinia est. Vestibulum gravida iaculis sem, sit amet auctor erat consequat ac. Suspendisse ultrices egestas lectus, vel rutrum sem egestas ac. Sed sed odio nec odio imperdiet sagittis. Duis maximus vel dolor id pellentesque.

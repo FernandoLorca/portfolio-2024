@@ -2,17 +2,21 @@
 interface Props {
   text: string
   isLarge?: boolean
+  path: string
 }
 
-const { text, isLarge = false }: Props = Astro.props
+const { text, isLarge = false, path }: Props = Astro.props
 ---
 
 <div class={`h-44 ${!isLarge ? 'col-span-1' : 'col-span-2'}`}>
-  <div class="relative w-full h-full">
+  <a
+    class="relative hover:opacity-75 transition-all duration-200 ease-in-out"
+    href={path}
+  >
     <div class="absolute h-full w-full bg-white z-10 opacity-5 rounded-md">
     </div>
     <div class="relative h-full z-20 flex justify-center items-center">
-      <p class="text-2xl text-white font-bold">{text}</p>
+      <p class="text-2xl font-bold">{text}</p>
     </div>
-  </div>
+  </a>
 </div>
