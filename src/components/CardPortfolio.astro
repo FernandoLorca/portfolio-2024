@@ -2,23 +2,30 @@
 interface Props {
   title: string
   tech: string
-  isLarge?: boolean
-  bgColor?: string
+  href: string | undefined
 }
 
-const {
-  title,
-  tech,
-  isLarge = false,
-  bgColor = 'bg-[#2C0947]',
-}: Props = Astro.props
+const { title, tech, href }: Props = Astro.props
+
+const bgColors = [
+  'bg-[#2C0947]',
+  'bg-[#D13667]',
+  'bg-[#3A58AC]',
+  'bg-[#341D6E]',
+  'bg-[#D13667]',
+]
+
+const isLarge = [true, false]
+
+const randomBgColor = bgColors[Math.floor(Math.random() * bgColors.length)]
+const randomIsLarge = isLarge[Math.floor(Math.random() * isLarge.length)]
 ---
 
 <a
-  class={`relative col-span-1 rounded-lg ${bgColor} ${
-    isLarge && 'row-span-2'
+  class={`relative col-span-1 rounded-lg ${randomBgColor} ${
+    randomIsLarge && 'row-span-2'
   } hover:opacity-75 transition-all duration-200 ease-in-out`}
-  href="/"
+  href={href}
 >
   <div class="absolute w-full h-full border-2 opacity-10 z-10 rounded-lg"></div>
   <div class="relative p-3">
