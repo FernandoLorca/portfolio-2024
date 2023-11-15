@@ -1,6 +1,7 @@
 ---
 import '@fontsource/space-mono'
 import Navbar from '../components/Navbar.astro'
+import PageTitle from '../components/PageTitle.astro'
 
 const { frontmatter } = Astro.props
 ---
@@ -29,14 +30,11 @@ const { frontmatter } = Astro.props
     <title>Fernando Lorca | {frontmatter.title}</title>
   </head>
   <body class="pb-10">
-    <Navbar />
+    <Navbar href="/portfolio" />
     <main class="px-5">
       <article class="flex flex-col items-center">
-        <h1 class="text-center text-4xl font-bold pb-5 md:max-w-[30rem]">
-          {frontmatter.title}
-        </h1>
-        <p class="text-center md:max-w-[30rem]">{frontmatter.description}</p>
-        <div class="max-w-[40rem]">
+        <PageTitle title={frontmatter.title} />
+        <div class="max-w-[40rem] py-10">
           <slot />
         </div>
       </article>

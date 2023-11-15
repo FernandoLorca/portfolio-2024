@@ -7,10 +7,10 @@ interface Props {
 const { src, alt }: Props = Astro.props
 ---
 
-<div class="flex justify-center items-center py-10">
+<div class="flex justify-center items-center">
   <img
     src={src}
     alt={alt}
-    class="rounded-lg max-w-[20rem] max-h-[20rem]"
+    class="rounded-lg max-w-[15rem] max-h-[15rem] md:max-w-[20rem] md:max-h-[20rem]"
   />
 </div>

@@ -1,17 +1,18 @@
 ---
 interface Props {
   isIndex?: boolean
+  href?: string
 }
 
-const { isIndex = false } = Astro.props
+const { isIndex = false, href }: Props = Astro.props
 ---
 
 <div class="relative flex justify-center items-center py-10">
   <a
-    class={`absolute flex items-center gap-2 mr-40 p-5 z-10 ${
+    class={`absolute flex items-center gap-2 mr-40 p-5 z-20 ${
       isIndex && 'hidden'
     }`}
-    href="/"
+    href={href}
   >
     <div class="w-2 h-2 border-b-2 border-l-2 rotate-45"></div>
   </a>

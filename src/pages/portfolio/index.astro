@@ -8,10 +8,10 @@ const projects = await Astro.glob('./projects/*.mdx')
 ---
 
 <Layout title="Portfolio">
-  <Navbar />
+  <Navbar href="/" />
   <main class="flex items-center flex-col">
     <PageTitle title="Portfolio" />
-    <div class="grid grid-cols-2 gap-5 px-5 lg:max-w-[50rem]">
+    <div class="grid grid-cols-2 gap-5 px-5 py-10 lg:max-w-[50rem]">
       {
         projects.map(project => (
           <CardPortfolio
