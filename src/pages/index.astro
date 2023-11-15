@@ -2,11 +2,12 @@
 import Card from '../components/Card.astro'
 import Layout from '../layouts/Layout.astro'
 import Navbar from '../components/Navbar.astro'
+import Badges from '../components/Badges.astro'
 ---
 
 <Layout>
   <Navbar isIndex={true} />
-  <main class="flex justify-center">
+  <main class="flex flex-col items-center">
     <div class="grid grid-cols-2 gap-5 px-5 w-[100%] md:w-[40rem] lg:w-[50rem]">
       <Card
         text="Portfolio"
@@ -20,6 +21,93 @@ import Navbar from '../components/Navbar.astro'
         text="Blog"
         isLarge={true}
         path="/blog"
+      />
+    </div>
+    <div class="grid grid-cols-3 md:grid-cols-6 place-items-center pt-10 gap-2">
+      <Badges
+        badgesText="HTML"
+        badgesIcon="html5"
+        badgesIconColor="E34F26"
+      />
+      <Badges
+        badgesText="CSS"
+        badgesIcon="css3"
+        badgesIconColor="1572B6"
+      />
+      <Badges
+        badgesText="Vscode"
+        badgesIcon="visualstudiocode"
+        badgesIconColor="007ACC"
+      />
+      <Badges
+        badgesText="Javascript"
+        badgesIcon="javascript"
+        badgesIconColor="F7DF1E"
+      />
+      <Badges
+        badgesText="Typecript"
+        badgesIcon="typescript"
+        badgesIconColor="3178c6"
+      />
+      <Badges
+        badgesText="Git"
+        badgesIcon="git"
+        badgesIconColor="E34F26"
+      />
+      <Badges
+        badgesText="Github"
+        badgesIcon="github"
+        badgesIconColor="ffffff"
+      />
+      <Badges
+        badgesText="Postgres"
+        badgesIcon="postgresql"
+        badgesIconColor="ffffff"
+      />
+      <Badges
+        badgesText="React"
+        badgesIcon="react"
+        badgesIconColor="61DAFB"
+      />
+      <Badges
+        badgesText="Astro"
+        badgesIcon="astro"
+        badgesIconColor="ff7e33"
+      />
+      <Badges
+        badgesText="Vite"
+        badgesIcon="vite"
+        badgesIconColor="646CFF"
+      />
+      <Badges
+        badgesText="Node.js"
+        badgesIcon="node.js"
+        badgesIconColor="339933"
+      />
+      <Badges
+        badgesText="Json"
+        badgesIcon="json"
+        badgesIconColor="723fff"
+      />
+      <Badges
+        badgesText="JsonWebToken"
+        badgesIcon="jsonwebtokens"
+        badgesIconColor="d63aff"
+      />
+      <Badges
+        badgesText="pnpm"
+        badgesIcon="pnpm"
+        badgesIconColor="f9ad00"
+      />
+      <Badges
+        badgesText="Bun"
+        badgesIcon="bun"
+        badgesIconColor="fbf0df"
+      />
+      <Badges
+        badgesText="Linux"
+        badgesIcon="linux"
+        badgesIconColor="FCC624"
       />
     </div>
   </main>

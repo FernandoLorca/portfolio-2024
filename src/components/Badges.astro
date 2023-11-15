@@ -1,0 +1,13 @@
+---
+interface Props {
+  badgesText: string
+  badgesIcon: string
+  badgesIconColor: string
+}
+
+const { badgesText, badgesIcon, badgesIconColor }: Props = Astro.props
+---
+
+<img
+  src={`https://img.shields.io/badge/${badgesText}-151516?style=flat-square&logo=${badgesIcon}&logoColor=${badgesIconColor}`}
+/>
